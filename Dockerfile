@@ -1,6 +1,6 @@
 # Copyright (c) 2016-present Mattermost, Inc. All Rights Reserved.
 # See License.txt for license information.
-FROM mysql:5.7
+FROM mysql:8.0
 
 RUN apt-get update && apt-get install -y ca-certificates
 
