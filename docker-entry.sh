@@ -3,7 +3,7 @@
 # See License.txt for license information.
 
 echo "Starting MySQL"
-/entrypoint.sh mysqld &
+/entrypoint.sh mysqld --default-authentication-plugin=mysql_native_password &
 
 until mysqladmin -hlocalhost -P3306 -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" processlist &> /dev/null; do
 	echo "MySQL still not ready, sleeping"
